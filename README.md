@@ -1,4 +1,4 @@
-# Zoho-CRM-Trigger-Workflow-Deluge
+# Zoho-CRM-Trigger-Workflow-Assignment-Rule-Deluge
 How to trigger workflow rules & assignment rules when Zoho CRM records are created, updated, or deleted via Deluge.
 
 ## Core Idea
