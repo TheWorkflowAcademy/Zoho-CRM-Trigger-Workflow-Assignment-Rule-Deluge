@@ -3,10 +3,10 @@ mp = {"Name":"Joe","Phone":"+1 678 XXX XXXX","Email":"joe@theworkflowacademy.com
 response = zoho.crm.createRecord("Leads",mp,{"trigger":{"workflow"}});
 
 //Create Records (Trigger Assignment Rule)
-response = zoho.crm.createRecord("Leads", mp, {"lar_id":"assignment-rule-id"});
+response = zoho.crm.createRecord("Leads", mp, {"lar_id":"assignment_rule_id"});
 
 //Create Records (Trigger Workflow & Assignment Rule)
-response = zoho.crm.createRecord("Leads", mp, {"trigger":{"workflow"},"lar_id":"assignment-rule-id});
+response = zoho.crm.createRecord("Leads", mp, {"trigger":{"workflow"},"lar_id":"assignment_rule_id});
 
 // Update Records (Trigger Workflow Rule)
 datalist = List();
@@ -23,7 +23,7 @@ response = invokeurl
   url:"https://www.zohoapis.com/crm/v2/Leads/"+leadid
   type :PUT
   parameters:datamap.toString()
-  connection:"insert-crm-connection" 
+  connection:"crm_oauth_connection" 
 ];
 info response;
 
