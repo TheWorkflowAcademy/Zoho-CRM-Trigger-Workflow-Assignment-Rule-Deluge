@@ -45,7 +45,7 @@ response = invokeurl
   url:"https://www.zohoapis.com/crm/v2/Leads/"+leadid
   type :PUT
   parameters:datamap.toString()
-  connection:"insert-crm-connection" 
+  connection:"crm_oauth_connection" 
 ];
 info response;
 ```
