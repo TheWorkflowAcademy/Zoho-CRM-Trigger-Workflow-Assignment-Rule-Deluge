@@ -15,7 +15,7 @@ response = zoho.crm.createRecord("Leads",mp,{"trigger":{"workflow"}});
 ```
 *Note: Change "Leads" and "mp" to the respective Module Name and map variable*
 
-To trigger assignment rules on record creation, first, you need to get the assignment rule ID (you can get it from the URL of the assignment rule), then put it in a map with "lar_id" as the key, and the assignment rule ID as the value.
+To trigger assignment rules on record creation, first, you need to get the assignment rule ID (you can get it from the URL of the assignment rule), and put it in a map with "lar_id" as the key, and the assignment rule ID as the value. Then, insert it as a parameter at the end of your Deluge task.
 
 * If you wish to trigger the assignment rule alone:
 ```javascript
