@@ -33,7 +33,7 @@ Unfortunately, the `{trigger":{"workflow"}}` parameter does not work for updates
 ```javascript
 datalist = List();
 mp=Map();
-mp.put("Lead_Status","Pre-Qualified"); //Here is where you insert your update map
+mp.put("Lead_Status","Pre-Qualified"); //Insert your update map here
 datalist.add(mp);
 triglist = List();
 triglist.add("workflow");
