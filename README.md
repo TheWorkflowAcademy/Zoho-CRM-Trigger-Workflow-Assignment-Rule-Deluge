@@ -2,7 +2,7 @@
 How to trigger workflow rules & assignment rules when Zoho CRM records are created, updated, or deleted via Deluge.
 
 ## Core Idea
-When a Zoho CRM record is created / updated / deleted via Deluge, it does not trigger any associated workflow rule / assignment rule that you have set up in CRM if you do not tell it to do so. This is in a way, more of a feature than a limitation as it offers developers more flexibility. This article demonstrates the different trigger parameters needed to perform the actions.
+When a Zoho CRM record is created / updated / deleted via Deluge, it does not trigger any associated workflow rule / assignment rule that you have set up in CRM if you do not tell it to do so. This is in a way, more of a feature than a limitation as it offers developers more flexibility. This article demonstrates the different trigger parameters needed to perform these actions.
 
 ## Tutorial
 
