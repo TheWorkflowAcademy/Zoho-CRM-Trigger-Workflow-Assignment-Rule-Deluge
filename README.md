@@ -28,7 +28,7 @@ response = zoho.crm.createRecord("Leads", mp, {"trigger":{"workflow"},"lar_id":"
 *Note: Replace "4409363000012741244" with the respective assignment rule ID.*
 
 ### Update Records
-Unfortunately, the `{trigger":{"workflow"}}` parameter does not work for updates. To trigger workflows on record updates, you need to abandon Deluge task and use the following API call instead, with the exact paremeters in this specific format.
+Unfortunately, the `{trigger":{"workflow"}}` parameter does not work for updates. To trigger workflows on record updates, you need to abandon Deluge task and use the following API call instead, with the exact parameters in this specific format.
 
 ```javascript
 datalist = List();
