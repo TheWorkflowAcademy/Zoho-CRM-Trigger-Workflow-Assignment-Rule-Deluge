@@ -32,7 +32,7 @@ Unfortunately, the `{trigger":{"workflow"}}` parameter does not work for updates
 
 If you do not specify the trigger, it will automatically trigger workflows, blueprints and approvals. 
 * If you **do not** wish to trigger, you need to enter the trigger value as `[]` (an empty list) in the *trigger* parameter.
- * It's important to switch off the trigger if your script is being triggered on Edit of any field to prevent a self-triggering loop from happening.
+  * It's important to switch off the trigger if your script is being triggered on Edit of any field to prevent a self-triggering loop from happening.
 * If you wish to only trigger the workflow, add "workflow" into the list for the *trigger* parameter like below.
 
 ```javascript
