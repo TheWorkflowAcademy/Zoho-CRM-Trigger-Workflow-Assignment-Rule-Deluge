@@ -6,7 +6,7 @@ response = zoho.crm.createRecord("Leads",mp,{"trigger":{"workflow"}});
 response = zoho.crm.createRecord("Leads", mp, {"lar_id":"assignment_rule_id"});
 
 //Create Records (Trigger Workflow & Assignment Rule)
-response = zoho.crm.createRecord("Leads", mp, {"trigger":{"workflow"},"lar_id":"assignment_rule_id});
+response = zoho.crm.createRecord("Leads", mp, {"trigger":{"workflow"},"lar_id":assignment_rule_id});
 
 // Update Records (Trigger Workflow Rule)
 datalist = List();
