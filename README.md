@@ -19,7 +19,7 @@ To trigger assignment rules on record creation, first, you need to get the assig
 
 * If you wish to trigger the assignment rule alone:
 ```javascript
-response = zoho.crm.createRecord("Leads", mp, {"lar_id":"4409363000012741244"});
+response = zoho.crm.createRecord("Leads", mp, {"trigger":{"lar_id":"4409363000012741244"}});
 ```
 * If you wish to trigger both workflow and assignment rule, add it inside the trigger workflow map, after the trigger workflow parameter:
 ```javascript
