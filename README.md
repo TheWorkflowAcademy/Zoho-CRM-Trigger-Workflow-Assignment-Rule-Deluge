@@ -2,12 +2,14 @@
 How to trigger workflow rules, assignment rules or blueprint when Zoho CRM records are created, updated, or deleted via Deluge.
 
 ## Core Idea
-When a Zoho CRM record is created / updated / deleted via Deluge, it does not trigger any associated workflow rule / assignment rule / blueprint that you have set up in CRM if you do not tell it to do so. This is in a way, more of a feature than a limitation as it offers developers more flexibility. This article demonstrates the different trigger parameters needed to perform these actions.
+When a Zoho CRM record is created / updated via [Deluge task](https://www.zoho.com/deluge/help/crm/create-record.html), it does not trigger any associated workflow rule / assignment rule / blueprint that you have set up in CRM if you do not tell it to do so. This is in a way, more of a feature than a limitation as it offers developers more flexibility. This article demonstrates the different trigger parameters needed to perform these actions.
+
+Note: If you're using the [Zoho CRM API ](https://www.zoho.com/crm/developer/docs/api/v2.1/insert-records.html) to perform the actions, it works inversely - if not specified, it will automatically trigger workflows, approvals and blueprint. As for assignment rules however, you will still need to specify it in the parameters.
 
 ## Tutorial
 
 ### Create / Update Records
-For record creation and upadate, if you're using [Deluge task](https://www.zoho.com/deluge/help/crm/create-record.html), all you need to do is to insert a `{"trigger":{"workflow"}}` parameter after the create record / update map.
+For record creation and upadate, all you need to do is to insert a `{"trigger":{"workflow"}}` parameter after the create record / update map.
 
 ```javascript
 // Create Record
@@ -47,18 +49,3 @@ response = zoho.crm.createRecord("Leads", mp, {"trigger":{"blueprint"}});
 ```javascript
 response = zoho.crm.createRecord("Leads", mp, {"trigger":{"workflow","blueprint","lar_id":"xxxxxxxxxxxxxxxxxxx"});
 ```
-
-### Delete Records
-
-When deleting a record via the [delete record API call](https://www.zoho.com/crm/developer/docs/api/v2/delete-records.html), you need to add the `wf_trigger=true` parameter at the end of the URL.
-
-```javascript
-response = invokeurl
-[
-	url: "https://www.zohoapis.com/crm/v2/Leads?ids=leadid&wf_trigger=true"
-	type: DELETE
-	connection:"crm_oauth_connection"
-];
-info response;
-```
-*Note: Change "Leads" and "leadid" to the respective Module Name and Record ID variable*
